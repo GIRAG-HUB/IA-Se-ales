@@ -1,0 +1,19 @@
+# Datos de Yahoo Finance. El ticker NO es idéntico al símbolo de tu broker
+# (p. ej. GC=F es el futuro del oro, tu XAUUSD cambia un poco de precio).
+
+timeframe: 15m        # 5m, 15m, 30m o 1h
+
+symbols:
+  - {name: Oro,     ticker: "GC=F"}
+  - {name: EURUSD,  ticker: "EURUSD=X"}
+  - {name: GBPUSD,  ticker: "GBPUSD=X"}
+  - {name: USDJPY,  ticker: "JPY=X"}
+
+strategy:
+  atr_sl_mult: 1.5
+  risk_reward: 2.0
+  adx_min: 18
+  rsi_buy: [52, 68]
+  rsi_sell: [32, 48]
+  atr_pct_min: 0.00005
+  atr_pct_max: 0.03
